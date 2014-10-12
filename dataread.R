@@ -1,6 +1,6 @@
 dataread <- function(file_name){
-    library(lubridate)
-    library(dplyr)
+    require(lubridate)
+    require(dplyr)
     Sys.setlocale("LC_TIME", "en_US")
     data <- read.table(file = file_name, header = T, sep = ';', na.strings = '?',
                        colClasses = c(rep('character',2), rep('numeric', 7)))
