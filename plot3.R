@@ -1,6 +1,8 @@
 source('dataread.R')
 d <- dataread('household_power_consumption.txt')
 
+png(filename = "plot3.png", bg = "white")
+
 plot(d$timestamp, d$Sub_metering_1, 
      type = 'l', 
      ylab = 'Energy sub metering', 
@@ -12,5 +14,4 @@ legend('topright',
        lty = 1, 
        col = c('black', 'red', 'blue'))
 
-dev.copy(png, file = "plot3.png")  ## Copy my plot to a PNG file
 dev.off() 

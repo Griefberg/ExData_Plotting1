@@ -1,6 +1,8 @@
 source('dataread.R')
 d <- dataread('household_power_consumption.txt')
 
+png(filename = "plot4.png", bg = "white")
+
 par(mfrow = c(2,2),  mar = c(4,4,1,1))
 
 # graph 1
@@ -27,7 +29,7 @@ legend('topright',
        lty = 1, 
        lwd = 1,
        col = c('black', 'red', 'blue'),
-       cex = 0.5,
+       bty = 'n'
        )
 
 # graph 4
@@ -36,5 +38,4 @@ plot(d$timestamp, d$Global_reactive_power,
      ylab = 'Global Reactive Power', 
      xlab = "datetime")
 
-dev.copy(png, file = "plot4.png")  ## Copy my plot to a PNG file
 dev.off() 
