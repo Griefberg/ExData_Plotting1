@@ -3,7 +3,7 @@ d <- dataread('household_power_consumption.txt')
 
 png(filename = "plot4.png", bg = "white")
 
-par(mfrow = c(2,2),  mar = c(4,4,1,1))
+par(mfrow = c(2,2))
 
 # graph 1
 plot(d$timestamp, d$Global_active_power, 
